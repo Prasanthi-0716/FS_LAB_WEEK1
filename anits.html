@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anits Website</title>
+
+    <style>
+       body{
+            margin:0;
+            font-family:Segoe UI, Arial, sans-serif;
+            background:#f5f7fa;
+        }
+
+
+        .topbar{
+            background:#08182f;
+            color:white;
+            padding:8px;
+            text-align:center;
+            font-size:14px;
+        }
+
+        header{
+            background:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 50px;
+            box-shadow:0 2px 5px lightgray;
+        }   
+
+        header img{
+            width:90px;
+        }
+
+        .title{
+            text-align:center;
+            flex:1;
+        }
+
+        .title h1{
+            color:#ff6600;
+            margin:0;
+            font-size:34px;
+        }
+
+        .title p{
+            margin-top:5px;
+            color:#444;
+        }
+
+        .contact{
+            background:#0d7be0;
+            color:white;
+            padding:12px 18px;
+            border-radius:10px;
+            font-weight:bold;
+        }
+
+        nav{
+            background:linear-gradient(to right,#133a73,#2f8ad6);
+            text-align:center;
+            padding:15px;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:yellow;
+        }
+
+
+        .notice{
+            background:#fff5a5;
+            color:#000;
+            padding:10px;
+            font-weight:bold;
+        }
+
+/* Sections */
+        section{
+            width:90%;
+            margin:25px auto;
+            background:white;
+            border-radius:10px;
+            box-shadow:0 0 15px rgba(0,0,0,0.15);
+            padding:25px;
+        }
+
+        section h2{
+            color:#003366;
+        }
+
+/* Banner Images */
+        .banner{
+            width:100%;
+            border-radius:10px;
+        }
+
+/* Statistics Cards */
+        .gallery{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
+            margin-top:25px;
+        }
+
+        .gallery h3{
+            width:180px;
+            background:#004b8d;
+            color:white;
+            padding:20px;
+            border-radius:8px;
+            text-align:center;
+            transition:.3s;
+        }
+
+        .gallery h3:hover{
+            background:#ff6600;
+            transform:translateY(-5px);
+        }
+
+/* Footer */
+        footer{
+            background:#002147;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header style="display: flex;">
+    <img src="C:\Users\anits-csm\OneDrive\Pictures\Screenshots\Screenshot 2026-07-21 140557.png">
+    <h1>ANIL NEERUKONDA INSTITUTE OF ENGINEERING AND SCIENCES(AUTONOMOUS)</h1>
+    <img src="C:\Users\anits-csm\OneDrive\Pictures\Screenshots\Screenshot 2026-07-21 140609.png">
+    <img src="C:\Users\anits-csm\OneDrive\Pictures\Screenshots\Screenshot 2026-07-21 140629.png">
+</header>
+
+<nav>
+    <a href="#">ABOUT US</a>
+    <a href="#">ADMISSIONS</a>
+    <a href="#">ACADEMICS</a>
+    <a href="#">DEPARTMENTS</a>
+    <a href="#">R&D</a>
+    <a href="#">WOMEN CELL</a>
+    <a href="#">LIBRARY</a>
+</nav>
+<div class="notice">
+    <marquee direction="left" scroll amount="1">
+          📢 Call for Paper Submissions 
+          ICIMES 2026 (Springer Scopus Indexed) 
+          Hybrid mode 25–26 August 2026 Submission Deadline:30-04-2026 
+          📢 JRF Recruitment – Department of ECE
+          📢 Minor Degree in Quantum Technologies 
+          📢 Bus Incharges & Schedule Details 
+          📢 Contact Hostel Information
+          📢 Education Verification Portal Link
+    </marquee>
+</div>
+
+
+<section>
+    <img src="C:\Users\anits-csm\OneDrive\Pictures\Screenshots\Screenshot 2026-07-21 135058.png" alt="Campus" width="100%">
+</section>
+
+<section>
+    <h2>Welcome to Anits</h2>
+    <p>
+        Anil Neerukonda Institute of Technology & Sciences (ANITS), Visakhapatnam is owned by Megha Engineering and Infrastructure Limited (MEIL) which is one of the top infrastructure and manufacturing company in India with headquarters at Hyderabad. The institute was established in the academic year 2001-02 by Anil Neerukonda Educational Society (ANES) which was founded by Dr. N.B.R. Prasad, an NRI Philanthropist from the USA, with industrialists and eminent educationists in memory of his son Late Anil Neerukonda.
+    </p>
+<div class="gallery">
+        <h3>5k+ Active students</h3>
+        <h3>20k+ Alumni</h3>
+        <h3>390 Teaching Staff</h3>
+        <h3>50% faculty with phd's</h3>
+        <h3>5k+ Publications</h3>
+        <h3>37 H-Index</h3>
+        <h3>50k+ Reasearch projects</h3>
+        <h3>200k+ patents</h3>
+</div>
+</section>
+<section>
+    <h2>Accreditations</h2>
+    <p>
+        Enter a realm where creativity ignites excellence at ANITS. Home to the illustrious NAAC "A+" honour, we're a cradle of greatness recognised by AICTE and Andhra University. Here, horizons are limitless, and dreams are the seeds of reality. Embrace the canvas where your brightest colours come alive.
+    </p>
+    <div class="gallery">
+        <h3>NBA Accreditation</h3>
+        <h3>NAAC "A+" Accreditation</h3>
+        <h3>UGC Autonomous</h3>
+    </div>
+</section>
+<section>
+    <h2> Partners across india</h2>
+    <div class="gallery">
+       <h3>Infosys</h3> 
+       <h3>TCS</h3>
+       <h3>Amazon</h3>
+       <h3>Flipkart</h3>
+       <h3>Meil</h3>
+       <h3>Infinite</h3>
+       <h3>inncircle</h3>
+    </div>
+</section>
+<footer>
+    <p>2026 My Website. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
