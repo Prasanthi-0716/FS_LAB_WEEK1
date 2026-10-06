@@ -1,137 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>Student Marks</title>
-</head>
-<body>
-    <h2>Student Marks Table</h2>
-    <table border="1" cellpadding="15" align="top">
-        <tr>
-            <th>Name</th>
-            <th>Roll No</th>
-            <th>CD</th>
-            <th>COMP</th>
-            <th>AI</th>
-            <th>DAA</th>
-            <th>DBMS</th>
-        </tr>
-        <tr>
-            <td>Akshaya</td>
-            <td>98</td>
-            <td>85</td>
-            <td>90</td>
-            <td>88</td>
-            <td>92</td>
-            <td>87</td>
-        </tr>
-        <tr>
-            <td>Avinash</td>
-            <td>99</td>
-            <td>78</td>
-            <td>82</td>
-            <td>80</td>
-            <td>85</td>
-            <td>79</td>
-        </tr>
-        <tr>
-            <td>Prasanthi</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Pravalli</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Chaithu</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Lalisa</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Jennie</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Jisso</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Agam</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Rushi</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Jathin</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Roopini</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-        <tr>
-            <td>Mrunal</td>
-            <td>100</td>
-            <td>92</td>
-            <td>95</td>
-            <td>90</td>
-            <td>88</td>
-            <td>91</td>
-        </tr>
-     </table>
-    </body>
-</html>   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
+    <title>Student List</title>
+    <link rel="stylesheet" href="student.css" />
+    <script src="student.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Student List</h1>
+      <p>Manage the class list with a JavaScript array.</p>
+
+      <form onsubmit="addStudent(); return false;">
+        <label class="visually-hidden" for="studentName">Student name</label>
+        <input
+          id="studentName"
+          type="text"
+          placeholder="Enter a student name"
+          maxlength="60"
+          autocomplete="off"
+        />
+        <button type="submit">Add student</button>
+      </form>
+
+      <p class="student-count">Students: <strong id="count">0</strong></p>
+      <ul id="studentList" aria-label="Student names" aria-live="polite"></ul>
+    </main>
+  </body>
+</html>
