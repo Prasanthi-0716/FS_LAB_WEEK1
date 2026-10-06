@@ -1,7 +1,7 @@
-# Question 3: JavaScript Arrays and Functions
+# Question 4: Dynamic Webpage
 
-A student list webpage that uses a JavaScript array to store names and functions to add, display, and delete students.
+A responsive student roster built with HTML, CSS, and browser JavaScript. Add learners, search by name or course, and remove entries; the page updates its list and counts immediately.
 
-## Open
+## Run
 
 Open `index.html` in a browser. No installation or server is required.

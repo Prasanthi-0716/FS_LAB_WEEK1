@@ -1,64 +1,36 @@
-// State array to store student names
-let students = ["Bob", "Boina"]; // Pre-populated to match initial state
+const loginForm = document.querySelector("#loginForm");
+const loginPage = document.querySelector("#loginPage");
+const successPage = document.querySelector("#successPage");
+const loginTime = document.querySelector("#loginTime");
+const greeting = document.querySelector("#greeting");
+const portalContent = document.querySelector("#portal-content");
 
-// DOM Element References
-const studentInput = document.getElementById("studentInput");
-const addBtn = document.getElementById("addBtn");
-const studentCount = document.getElementById("studentCount");
-const studentList = document.getElementById("studentList");
+function formatLoginTime(date) {
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  const hour = date.getHours();
+  const displayHour = hour % 12 || 12;
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  const seconds = String(date.getSeconds()).padStart(2, "0");
+  const period = hour >= 12 ? "pm" : "am";
 
-// Function to render the list and update the count
-function render() {
-  // Clear existing items
-  studentList.innerHTML = "";
-
-  // Render each student in the array with 1-based index numbering
-  students.forEach((student, index) => {
-    const li = document.createElement("li");
-    li.className = "student-item";
-
-    const nameSpan = document.createElement("span");
-    nameSpan.textContent = `${index + 1}. ${student}`;
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.className = "delete-btn";
-    deleteBtn.textContent = "Delete";
-    deleteBtn.onclick = () => removeStudent(index);
-
-    li.appendChild(nameSpan);
-    li.appendChild(deleteBtn);
-    studentList.appendChild(li);
-  });
-
-  // Update total count
-  studentCount.textContent = students.length;
+  return `${day}/${month}/${year}, ${displayHour}:${minutes}:${seconds} ${period}`;
 }
 
-// Function to add a new student
-function addStudent() {
-  const name = studentInput.value.trim();
-  if (name !== "") {
-    students.push(name);
-    studentInput.value = "";
-    render();
-  }
+function getGreeting(hour) {
+  if (hour >= 5 && hour < 12) return "Good Morning";
+  if (hour >= 12 && hour < 17) return "Good Afternoon";
+  return "Good Night";
 }
 
-// Function to remove a student by array index
-function removeStudent(index) {
-  students.splice(index, 1);
-  render(); // Re-render updates numbering and count automatically
-}
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-// Event Listeners
-addBtn.addEventListener("click", addStudent);
-
-// Allow pressing 'Enter' inside the text box to add student
-studentInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    addStudent();
-  }
+  const now = new Date();
+  loginTime.textContent = formatLoginTime(now);
+  greeting.textContent = getGreeting(now.getHours());
+  loginPage.hidden = true;
+  successPage.hidden = false;
+  portalContent.focus();
 });
-
-// Initial Render on page load
-render();
