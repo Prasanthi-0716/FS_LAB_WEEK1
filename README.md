@@ -1,7 +1,7 @@
-# Question 4: Dynamic Webpage
+# Question 5: Modules in Node.js
 
-A responsive student roster built with HTML, CSS, and browser JavaScript. Add learners, search by name or course, and remove entries; the page updates its list and counts immediately.
+This example splits a Node.js program into ES modules. `students.js` exports a default value, and `studentUtils.js` exports named functions that `index.js` imports and uses. The entry point also demonstrates Node's built-in `os`, `path`, and `dns` modules.
 
 ## Run
 
-Open `index.html` in a browser. No installation or server is required.
+Run `npm start` in this folder. No additional packages are required.
